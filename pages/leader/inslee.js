@@ -1,0 +1,135 @@
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+
+export default function InsleePage() {
+  return (
+    <>
+      <Header />
+
+      <div
+        className="min-h-screen bg-cover bg-center p-8 flex flex-col md:flex-row gap-8 text-black font-serif"
+        style={{
+          backgroundImage: "url('/wash.webp')",
+        }}
+      >
+        {/* Image section */}
+        <div className="md:w-1/3 flex justify-center items-start">
+          <img
+            src="/inslee.jpg"
+            alt="Jay Inslee"
+            className="w-full rounded-lg shadow-lg"
+            style={{ maxHeight: "700px", objectFit: "cover" }}
+          />
+        </div>
+
+        {/* Gray box content */}
+        <div className="bg-gray-300 rounded-lg p-8 md:w-2/3">
+          <h1 className="text-2xl font-bold mb-2">Governor Jay Inslee</h1>
+          <p className="italic mb-4">
+            "The American dream has always been about chasing opportunity and pursuing a brighter future for ourselves and our children."
+          </p>
+
+          <p className="mb-4">
+            Governor Jay Inslee has led Washington since 2013, championing progressive policies on climate change, healthcare, and economic growth. Widely recognized as one of America’s "climate governors," he has pushed Washington to adopt aggressive clean energy goals and invest in green jobs.
+          </p>
+          <p className="mb-4">
+            Inslee has prioritized expanding healthcare access, improving education, and fostering Washington’s tech-driven economy. He is known for his staunch defense of environmental protections and social equity, and he gained national attention during his 2020 presidential campaign focused on combating climate change.
+          </p>
+          <p className="mb-4">
+            While popular among progressives, Inslee has faced criticism from conservatives and rural communities for his strong environmental regulations and perceived tax increases. Nonetheless, he remains a central figure in the national climate policy debate.
+          </p>
+
+          {/* Ideology rating header */}
+          <h2 className="text-center font-bold text-lg mt-8 mb-4">Progressive</h2>
+          {/* Ideology bars */}
+          <div className="mt-8 space-y-6">
+            {[
+              ["Progressive", "Conservative", "12%"],
+              ["Pro‑Environment", "Pro‑Industry", "5%"],
+              ["Fiscal Progressivism", "Fiscal Conservatism", "15%"],
+              ["Populist", "Establishment", "30%"],
+              ["Dovish", "Hawkish", "25%"],
+            ].map(([leftLabel, rightLabel, position], i) => (
+              <div key={i}>
+                <div className="flex justify-between text-sm mb-1">
+                  <span>{leftLabel}</span>
+                  <span>{rightLabel}</span>
+                </div>
+                <div className="relative h-4 rounded-full" style={{ background: "linear-gradient(to right, #0047AB, #C41E3A)" }}>
+                  <div className="absolute top-[-10px]" style={{ left: position, transform: "translateX(-50%)" }}>
+                    <span style={{ fontSize: "1.5rem" }}>⬆️</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Achievements and Controversies */}
+          <div className="mt-12 flex flex-col md:flex-row gap-8 border-t border-dotted pt-8">
+            <div className="md:w-1/2">
+              <h2 className="text-xl font-semibold mb-2">Achievements</h2>
+              <ul className="list-disc list-inside">
+                <li>Pushed Washington’s 100% clean energy law</li>
+                <li>Expanded Medicaid and healthcare access statewide</li>
+                <li>Improved public education funding and teacher pay</li>
+                <li>Led major transportation and infrastructure investments</li>
+                <li>Strengthened protections for immigrant communities</li>
+              </ul>
+            </div>
+            <div className="md:w-1/2">
+              <h2 className="text-xl font-semibold mb-2">Controversies</h2>
+              <ul className="list-disc list-inside">
+                <li>Criticized for strict COVID-19 restrictions and lockdowns</li>
+                <li>Debates over state budget increases and tax proposals</li>
+                <li>Pushback on carbon tax attempts and gas price impacts</li>
+                <li>Criticism from rural areas over environmental focus</li>
+                <li>Accusations of over-centralizing executive power</li>
+              </ul>
+            </div>
+          </div>
+          {/* Top Donors */}
+          <div className="mt-12 border-t border-dotted pt-8">
+            <h2 className="text-xl font-semibold mb-4 text-center">Top Donors</h2>
+            <ul className="list-none flex flex-col items-start space-y-4">
+              <li className="flex items-center">
+                <img src="/microsoft.png" alt="Microsoft logo" className="w-6 h-6 mr-2" />
+                <strong>Microsoft Corp</strong> (Technology & software) — $57,002
+              </li>
+              <li className="flex items-center">
+                <img src="/uwash.png" alt="University of Washington logo" className="w-6 h-6 mr-2" />
+                <strong>University of Washington</strong> (Public university & research) — $20,092
+              </li>
+              <li className="flex items-center">
+                <img src="/helion.jpg" alt="Helion logo" className="w-6 h-6 mr-2" />
+                <strong>Helion</strong> (Fusion energy technology) — $2,000
+              </li>
+              <li className="flex items-center">
+                <img src="/eei.png" alt="Edison Electric Institute logo" className="w-6 h-6 mr-2" />
+                <strong>Edison Electric Institute</strong> (Energy utility association) — $2,000
+              </li>
+            </ul>
+          </div>
+          {/* Election images */}
+          <div className="mt-12 flex flex-wrap justify-center gap-6">
+            {[
+              { year: "2012", image: "/washingtonLean.png", margin: "D +2.8%" },
+              { year: "2016", image: "/washingtonLikely.png", margin: "D +8.7%" },
+              { year: "2020", image: "/washingtonLikely.png", margin: "D +13.5%" },
+            ].map((elect, i) => (
+              <div key={i} className="flex flex-col items-center">
+                <img
+                  src={elect.image}
+                  alt={`Inslee ${elect.year}`}
+                  className="max-w-[150px] object-contain"
+                />
+                <p className="mt-2 text-sm">{elect.year} Margin {elect.margin}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </>
+  );
+}

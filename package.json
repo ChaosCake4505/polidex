@@ -1,0 +1,35 @@
+{
+  "name": "my-election-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@visx/pattern": "^3.12.0",
+    "leaflet": "^1.9.4",
+    "next": "15.3.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
+    "react-simple-maps": "^3.0.0",
+    "react-tooltip": "^5.29.1",
+    "recharts": "^3.1.0",
+    "topojson-client": "^3.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.4",
+    "mapshaper": "^0.6.110",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
