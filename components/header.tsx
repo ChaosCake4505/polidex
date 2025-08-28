@@ -7,7 +7,7 @@ export default function Header() {
       <Link href="/">
         <div className="w-[200px] h-[70px] cursor-pointer">
           <img
-            src="/polidex2.png"
+            src="/Polidex2.png"
             alt="Polidex Logo"
             className="w-full h-full object-contain"
           />
