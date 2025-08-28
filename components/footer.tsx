@@ -6,7 +6,7 @@ export default function Footer() {
       {/* Left side: Logo */}
       <div className="flex flex-col items-start max-w-xs">
         <div className="w-[220px] h-auto mb-4">
-          <img src="/polidexfoot.png" alt="Polidex Logo" className="w-full h-auto object-contain" />
+          <img src="/PolidexFoot.png" alt="Polidex Logo" className="w-full h-auto object-contain" />
         </div>
       </div>
 
