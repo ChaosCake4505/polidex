@@ -1,4 +1,4 @@
-// pages/_document.js
+// pages/_document.tsx
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -6,10 +6,10 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* optional: iOS address-bar color */}
+        {/* optional brand color */}
         <meta name="theme-color" content="#000000" />
       </Head>
-      <body>
+      <body className="bg-black">
         <Main />
         <NextScript />
       </body>
